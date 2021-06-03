@@ -1,0 +1,6 @@
+#!/bin/sh
+export TARGET=arm-apple-darwin11
+export CC=ios-clang
+export PREFIX=/opt/iPhoneOS8.1.sdk
+export CFLAGS="$CFLAGS -g0 -O2 -I$PREFIX/System/Library/Frameworks/OpenGLES.framework/Headers"
+./configure --host=$TARGET --prefix=$PREFIX/usr --disable-shared

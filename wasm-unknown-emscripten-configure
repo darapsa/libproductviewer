@@ -1,0 +1,5 @@
+#!/bin/sh
+export PREFIX=$EMSDK/upstream/emscripten/cache/wasm
+export CPPFLAGS="$CPPFLAGS -DDEBUG"
+export CFLAGS="$CFLAGS -g"
+emconfigure ./configure --prefix=$PREFIX --libdir=$PREFIX --disable-shared
