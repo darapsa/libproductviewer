@@ -66,7 +66,7 @@ void pv_texturize(const char *texture)
 	stbi_image_free(image);
 }
 
-void pv_init(const char *obj, void (*file_reader)(const char *path, char **data, size_t *len),
+void pv_init(const char *obj, void (*file_reader)(const char *, char **, size_t *),
 		const char *color, unsigned int width, unsigned int height)
 {
 	size_t tex_name_len;
