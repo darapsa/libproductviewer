@@ -1,4 +1,0 @@
-#!/bin/sh
-export CPPFLAGS="$CPPFLAGS -DDEBUG"
-export CFLAGS="$CFLAGS -g"
-emconfigure ./configure --prefix=$EMSDK/upstream/emscripten/system --disable-shared

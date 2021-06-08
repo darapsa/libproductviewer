@@ -7,4 +7,20 @@ AC_TYPE_SIZE_T
 AC_CHECK_FUNCS([strrchr memset])
 AM_PROG_AR
 LT_INIT
+AC_CANONICAL_HOST
+case $host_vendor in
+	*apple* ) apple=true;;
+	*) apple=false;;
+esac
+AM_CONDITIONAL([APPLE], [test x$apple = xtrue])
+case $host_cpu in
+	*wasm* ) wasm=true;;
+	*) wasm=false;;
+esac
+AM_CONDITIONAL([WASM], [test x$wasm = xtrue])
+case $host in
+	*arm*apple-darwin1* ) ios=true;;
+	*) ios=false;;
+esac
+AM_CONDITIONAL([IOS], [test x$ios = xtrue])
 AC_OUTPUT
