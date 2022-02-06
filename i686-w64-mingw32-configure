@@ -1,6 +1,0 @@
-#!/bin/sh
-export TARGET=mingw32
-export CC=$TARGET-gcc
-export CPPFLAGS="$CPPFLAGS -DDEBUG"
-export CFLAGS="$CFLAGS -g -std=c99"
-./configure --host=i686-w64-$TARGET --prefix=/usr/local/$TARGET --disable-shared
