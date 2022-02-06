@@ -1,5 +1,0 @@
-#!/bin/sh
-export PREFIX=/usr/local
-export CPPFLAGS="$CPPFLAGS -DDEBUG"
-export CFLAGS="$CFLAGS -g"
-./configure --prefix=$PREFIX --disable-static
