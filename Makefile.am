@@ -5,9 +5,6 @@ libproductviewer_la_CPPFLAGS = -I${prefix}/System/Library/Frameworks/OpenGLES.fr
 else
 libproductviewer_la_CPPFLAGS = -I${includedir}
 endif
-if WASM
-libproductviewer_la_LDFLAGS = -static
-endif
 if IOS
 libproductviewer_la_LDFLAGS = -static
 endif

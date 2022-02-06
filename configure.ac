@@ -16,11 +16,6 @@ case $host in
 	*) ios=false;;
 esac
 AM_CONDITIONAL([IOS], [test x$ios = xtrue])
-case $host_cpu in
-	*wasm* ) wasm=true;;
-	*) wasm=false;;
-esac
-AM_CONDITIONAL([WASM], [test x$wasm = xtrue])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
