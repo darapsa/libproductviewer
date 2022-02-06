@@ -1,8 +1,9 @@
 lib_LTLIBRARIES = libproductviewer.la
 libproductviewer_la_SOURCES = viewer.c converter.c
-libproductviewer_la_CFLAGS = -I${prefix}/include
 if APPLE
-libproductviewer_la_CFLAGS += -I${prefix}/System/Library/Frameworks/OpenGLES.framework/Headers
+libproductviewer_la_CPPFLAGS = -I${prefix}/System/Library/Frameworks/OpenGLES.framework/Headers
+else
+libproductviewer_la_CPPFLAGS = -I${includedir}
 endif
 if WASM
 libproductviewer_la_LDFLAGS = -static
