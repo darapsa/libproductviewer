@@ -6,3 +6,5 @@ else
 libproductviewer_la_CPPFLAGS = -I${includedir}
 endif
 include_HEADERS = productviewer.h
+pkgdata_DATA = productviewer/product.vert \
+	       productviewer/product.frag
